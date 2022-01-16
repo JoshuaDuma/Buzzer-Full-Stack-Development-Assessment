@@ -63,7 +63,7 @@ export default class user_page extends React.Component {
 
   loadFeed(){
     const that = this;
-      fetch('http://localhost:4111/user/' + this.state.userId + '?limit=' + this.limit)
+      fetch('https://buzzerapi.joshuaduma.ca/user/' + this.state.userId + '?limit=' + this.limit)
       .then(
         function (response) {
           if (response.status !== 200) {

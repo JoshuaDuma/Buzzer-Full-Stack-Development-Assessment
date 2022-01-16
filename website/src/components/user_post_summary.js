@@ -56,7 +56,7 @@ export default class user_post_summary extends React.Component {
 
   loadFeed(){
     const that = this;
-      fetch('http://localhost:4111/user_post_summary')
+      fetch('https://buzzerapi.joshuaduma.ca/user_post_summary')
       .then(
         function (response) {
           if (response.status !== 200) {
