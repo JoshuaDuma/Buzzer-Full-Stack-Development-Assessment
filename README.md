@@ -1,2 +1,19 @@
 # Buzzer-Full-Stack-Development-Assessment
-Full-Stack Development  Assessment, (Buzzerr,  August 2021) In this assignment, you will demonstrate your full-stack web development skills by  creating a full-stack web application that processes raw data and displays it to the user in the form of a feed. Please email the script and relevant output back to us within 24 hours after you receive the assignment. Data structure The raw data will be provided to you in the form of a JSON file, which includes the data of each specific post. The data will contain the following information: • Name of the post’s owner (“name”) • id of the post (“_id”) • Company of the post’s owner (“company”) • Profile Picture of the post’s owner (“profile_pic”) • The date the post was made (“date_posted”) • The content of the post (“post_content”) • The like count of the post owner (“likes”) Tasks 1. REST API The  API should process the information from the JSON file provided to you and send them to your  front-end feed Feel free to determine input/output of  API requests, as long as it addresses the functionality of the Feed. You can develop with Node.js/Express (or very less preferably another back-end platform). 2. Feed (where the data retrieved from the  API should be displayed): A. Implement a search bar  in the feed, so that It allows the user to query for a drop-down list of names based on their name data in the JSON file.  After the relevant names are displayed, the user should be able to click on a name to view all posts belonging to that userB. Implement an activity table, so that For all the data in the past 30 days, display a user’s post count along with their total likes categorized by each user, the basic format is as follows: User  Activity in the Past 30 Days Username Total Posts ahmed987 paula123 5 857 Total likes 45 1498 Note:  Your visual representation of this result does not need to be identical to the example provided. This feeds page is expected to be developed with React. How to stand out After fulfilling the basic requirements, you can stand out in our pool of applicants by further improving your application’s functionalities and appearance Here are some suggestions: • Implement fuzzy search in the search bar so minor spelling errors will not affect the result. • Optimize page rendering by displaying less posts per request. • Improving the styling of your interface to be more user friendly. • Allow the search bar to search based on the company as well, displaying all posts with that company name. • Anything else you can come up with!! Deployment Send us a link of your hosted code from a platform of your choice (ex.  AWS, GCP, Glitch, Heroku etc.) Some useful links if you are not familiar with any web services, e.g. Heroku: Heroku (React): https://dev.to/destrodevshow/how-to-deploy-react-app-to-heroku-in-5-minutes 3dni Heroku (Node): https://devcenter.heroku.com/articles/deploying-nodejsHeroku (Python): https://devcenter.heroku.com/articles/getting-started-with-python Email us OR  A  link to your Github repository that contains the code Any other notes you’d like to share regarding your web-app We will also try our  best to reply any emails on questions you have for  the assignment. Good Luck.
+
+This project is a coding challange provided by the company Buzzer. The purpose is to develop a social media platform to demonstrate my ability to use React and NodeJS. This program uses a mock data set that contains user's posts. The program allows a user to navigate and filter the data using React and NodeJS.
+
+The server is enabled or cors, proxy in development is an option but not required.
+
+For educational purposes only.
+
+## Demo
+Check out the demo hosted at https://buzzerreact.joshuaduma.ca/
+Access the headless API at https://buzzerapi.joshuaduma.ca/
+
+## Instructions
+
+Run `node main.js` to run the server on port 4111.
+
+Navigate to `./website` to run the React website.
+
+Run `npm start` to start the React website.
