@@ -2,7 +2,7 @@
 
 This project is a coding challange provided by the company Buzzer. The purpose is to develop a social media platform to demonstrate my ability to use React and NodeJS. This program uses a mock data set that contains user's posts. The program allows a user to navigate and filter the data using React and NodeJS.
 
-The server is enabled or cors, proxy in development is an option but not required.
+The server is enabled for cors, or proxy in development is an option but not required.
 
 For educational purposes only.
 
@@ -12,6 +12,10 @@ Check out the demo hosted at https://buzzerreact.joshuaduma.ca/
 Access the headless API at https://buzzerapi.joshuaduma.ca/
 
 ## Development Instructions
+
+Run `npm install` to install the packages in the root directory.
+
+Run `cd website` then `npm install` to install the packages in the website directory.
 
 Run `node api.js` to run the server on port 4111.
 
