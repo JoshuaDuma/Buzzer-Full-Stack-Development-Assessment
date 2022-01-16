@@ -7,6 +7,7 @@ import {
 import App from "./App";
 import User from './routes/user.js'
 import Home from './routes/home.js'
+import UserPostSummary from './routes/user_post_summary'
 
 const rootElement = document.getElementById("root");
 render(
@@ -15,7 +16,7 @@ render(
       <Route path="/" element={<App />}>
         <Route path="/" element={<Home />} />
         <Route path="/user/:id" element={<User />} />
-        <Route path="/user_post_summary" element={<User />} />
+        <Route path="/user_post_summary" element={<UserPostSummary />} />
       </Route>
     </Routes>
   </BrowserRouter>,

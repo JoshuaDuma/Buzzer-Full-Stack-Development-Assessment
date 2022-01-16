@@ -32,7 +32,7 @@ export default class user_search extends React.Component {
   _onChange(event){
     const that = this;
     if(event.target.value != ''){
-      fetch('http://localhost:4111/search_users?name=' + event.target.value)
+      fetch('https://buzzerapi.joshuaduma.ca/search_users?name=' + event.target.value)
       .then(
         function (response) {
           if (response.status !== 200) {

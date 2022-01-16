@@ -56,7 +56,7 @@ export default class feed extends React.Component {
 
   loadFeed(){
     const that = this;
-      fetch('http://localhost:4111/feed?' + 'limit=' + this.limit)
+      fetch('https://buzzerapi.joshuaduma.ca/feed?' + 'limit=' + this.limit)
       .then(
         function (response) {
           if (response.status !== 200) {

@@ -56,7 +56,7 @@ export default class user_post_summary extends React.Component {
 
   loadFeed(){
     const that = this;
-      fetch('http://localhost:4111/feed?' + 'limit=' + this.limit)
+      fetch('http://localhost:4111/user_post_summary')
       .then(
         function (response) {
           if (response.status !== 200) {
@@ -68,8 +68,7 @@ export default class user_post_summary extends React.Component {
           // Examine the text in the response
           response.json().then(function (data) {
             that.setState({
-              results: data.results,
-              totalPosts: data.hits
+              results: data,
             });
           });
         }
@@ -83,35 +82,26 @@ export default class user_post_summary extends React.Component {
     return(
         <div className="container border-right">
             <div className="mb-2 h4">
-                User Activity Table
+            User Activity in the Past 30 Days
             </div>
-            <table class="table">
+            <table className="table">
                 <thead>
                     <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Total Posts</th>
+                    <th scope="col">Total likes</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    </tr>
-                    <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                    </tr>
-                    <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                    </tr>
+                {
+                    this.state.results.map(el =>
+                        <tr>
+                            <th scope="row">{el.name}</th>
+                            <td>{el.totalPosts}</td>
+                            <td>{el.totalLikes}</td>
+                        </tr>
+                    )
+                }
                 </tbody>
             </table>
         </div>

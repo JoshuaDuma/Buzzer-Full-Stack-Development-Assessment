@@ -5,6 +5,11 @@ const session = require('express-session');
 const fuzzysort = require('fuzzysort')
 var cors = require('cors');
 
+/*
+ Issues: Some database files are missing for this example. I am using what was provided.
+ Author: Joshua Duma
+*/
+
 app.use(express.json())
 app.use(cors())
 
@@ -168,6 +173,33 @@ app.get('/user/:id', function (req, res) {
             hits: all_results.length
         }
         )
+});
+
+app.get('/user_post_summary', function (req, res) {
+    var feed = new feed_filters({limit: req.query.limit, page: req.query.page})
+    var id = req.params.id
+    var results = [], all_results = []
+    var count = 0
+    var results = []
+    var quaziOutput = {}
+    
+    // Sorts every time in case of changes to database.
+
+    for (var i = 0; i < json.length; i++) {
+        if(quaziOutput[json[i]['name']] === undefined){
+            quaziOutput[json[i]['name']] = {totalPosts: 1, totalLikes: json[i]['likes']}
+        } 
+        else{
+            quaziOutput[json[i]['name']].totalLikes += json[i]['likes']
+            quaziOutput[json[i]['name']].totalPosts += 1
+        }
+    }
+
+    for (const quazi in quaziOutput) {
+        results.push({name: quazi, totalLikes: quaziOutput[quazi]['totalLikes'], totalPosts: quaziOutput[quazi]['totalPosts']})
+    }
+    
+    res.json(results)
 });
 
 app.get('/search_users', function (req, res) {
