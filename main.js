@@ -5,7 +5,6 @@ const session = require('express-session');
 const fuzzysort = require('fuzzysort')
 var cors = require('cors');
 
-
 app.use(express.json())
 app.use(cors())
 
