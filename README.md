@@ -11,10 +11,18 @@ Check out the demo hosted at https://buzzerreact.joshuaduma.ca/
 
 Access the headless API at https://buzzerapi.joshuaduma.ca/
 
-## Instructions
+## Development Instructions
 
-Run `node main.js` to run the server on port 4111.
+Run `node api.js` to run the server on port 4111.
 
-Navigate to `cd ./website` to run the React website.
+Navigate to `cd ./website` to run the React website in development.
 
-Run `npm start` to start the React website.
+Run `npm start` to start the React website in development.
+
+## Server Instructions
+
+Run `pm2 start api.js --name buzzerapi --watch` and `pm2 save` to save the configuration.
+
+To run the website, move the website build to the server using rsync.
+
+Then run `pm2 start main.js --name buzzerreact --watch` and `pm2 save` to save the configuration.
