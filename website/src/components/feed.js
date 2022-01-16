@@ -91,7 +91,7 @@ export default class feed extends React.Component {
                     <li className="list-group-item" key={el._id}>
                         <div className="row">
                             <div className="col-2">
-                            <Link to={"/user/" + el.name + "?limit=25"}><img height="50px" width="75px" src={el.profile_pic} className="img-fluid rounded-circle float-start p-2" /></Link>
+                            <Link to={"/user/" + el.name + "?limit=25"}><img height="auto" width="100%" src={el.profile_pic} className="img-fluid rounded-circle mt-2" /></Link>
                             </div>
                             <div className="col-10">
                                 <Link to={"/user/" + el.name + "?limit=25"} className="fw-bold h5 card-title p-0 m-0 btn btn-none">{el.name}</Link>

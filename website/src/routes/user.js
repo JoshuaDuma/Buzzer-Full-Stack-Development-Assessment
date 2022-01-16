@@ -13,10 +13,10 @@ export default class User extends React.Component {
       <div className="container">
       <Suspense fallback={<div>Loading...</div>}>
         <div className="row">
-          <div className="col-sm-12 col-md-4 border-right">
+          <div className="col-sm-12 col-md-4 border-right mb-4">
               <UserSearchComponent />
             </div>
-          <div className="col-sm-12 col-md-8">
+          <div className="col-sm-12 col-md-8 mt-sm-3">
               <UserPageComponent />
           </div>
         </div>
