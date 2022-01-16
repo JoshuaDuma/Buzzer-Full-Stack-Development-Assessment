@@ -15,6 +15,6 @@ Access the headless API at https://buzzerapi.joshuaduma.ca/
 
 Run `node main.js` to run the server on port 4111.
 
-Navigate to `./website` to run the React website.
+Navigate to `cd ./website` to run the React website.
 
 Run `npm start` to start the React website.

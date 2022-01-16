@@ -82,18 +82,18 @@ export default class feed extends React.Component {
   render() {
     return(
         <div className="container border-right">
-            <div className="mb-2">
+            <div className="mb-2 h4">
                 Recent Posts
             </div>
-            <ul class="list-group list-group-flush">
+            <ul className="list-group list-group-flush">
             {
                 this.state.results.map(el =>
-                    <li class="list-group-item" key={el._id}>
+                    <li className="list-group-item" key={el._id}>
                         <div className="row">
-                            <div class="col-2">
+                            <div className="col-2">
                             <Link to={"/user/" + el.name + "?limit=25"}><img height="50px" width="75px" src={el.profile_pic} className="img-fluid rounded-circle float-start p-2" /></Link>
                             </div>
-                            <div class="col-10">
+                            <div className="col-10">
                                 <Link to={"/user/" + el.name + "?limit=25"} className="fw-bold h5 card-title p-0 m-0 btn btn-none">{el.name}</Link>
                                 <span>
                                     - {this.modifydate(el.date_posted)}

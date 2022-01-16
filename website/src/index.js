@@ -15,6 +15,7 @@ render(
       <Route path="/" element={<App />}>
         <Route path="/" element={<Home />} />
         <Route path="/user/:id" element={<User />} />
+        <Route path="/user_post_summary" element={<User />} />
       </Route>
     </Routes>
   </BrowserRouter>,

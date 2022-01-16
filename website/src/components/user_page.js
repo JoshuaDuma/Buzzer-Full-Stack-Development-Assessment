@@ -24,10 +24,14 @@ export default class user_page extends React.Component {
   }
 
   componentDidMount() {
+      this.setState({
+        userId: window.location.pathname.split("/")[2]
+      });
       this.loadFeed()
   }
 
-  componentWillUnmount() { 
+  componentWillUnmount() {
+
   }
 
   mtoM = [
@@ -70,7 +74,6 @@ export default class user_page extends React.Component {
   
           // Examine the text in the response
           response.json().then(function (data) {
-              console.log(data)
             that.setState({
               results: data.results,
               totalPosts: data.hits
@@ -86,7 +89,7 @@ export default class user_page extends React.Component {
   render() {
     return(
         <div className="container border-right">
-            <div className="mb-2">
+            <div className="mb-2 h4">
                 Recent Posts
             </div>
             <ul className="list-group list-group-flush">

@@ -12,9 +12,18 @@ export default class user_search extends React.Component {
 
     this._onChange = this._onChange.bind(this);
     this._clearSearch = this._clearSearch.bind(this);
+    this.reloadPage = this.reloadPage.bind(this);
+  }
+
+  reloadPage(event){
+    // If on the user page, reload.
+    if(window.location.pathname.split("/")[1] == 'user'){
+      window.location.navigate("/user/" + event + "?limit=25")
+    }
   }
 
   _clearSearch(event){
+    this.reloadPage(event)
     this.setState({
       results: []
     });
@@ -34,7 +43,6 @@ export default class user_search extends React.Component {
   
           // Examine the text in the response
           response.json().then(function (data) {
-            console.log(data)
             that.setState({
               results: data
             });
@@ -56,8 +64,8 @@ export default class user_search extends React.Component {
     return(
     <div className="container">
         <div className='hint-wrapper'>
-          <label htmlFor="exampleDataList" className="form-label">User Search</label>
-          <input className="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search..." onChange={this._onChange} />
+          <label htmlFor="exampleDataList" className="form-label h4">User Search</label>
+          <input className="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search..." onChange={this._onChange} onClick={this._onChange} />
           <ul className="list-group datalist-wrapper">
             {
               this.state.results.map(el =>
