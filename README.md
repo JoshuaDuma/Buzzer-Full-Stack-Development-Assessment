@@ -8,6 +8,7 @@ For educational purposes only.
 
 ## Demo
 Check out the demo hosted at https://buzzerreact.joshuaduma.ca/
+
 Access the headless API at https://buzzerapi.joshuaduma.ca/
 
 ## Instructions
